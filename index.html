@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/index.js" defer></script>
+</head>
+
+<body>
+    <div class="content-grid">
+        <header class="primary-header full-width">
+            <div class="primary-header__title">
+                APLICAÇÕES WEB E MÓVEIS - Atividade Prática
+            </div>
+        </header>
+        <main>
+            <aside>
+                <div class="photo">
+                    <img src="assets/photo.jpg">
+                </div>
+            </aside>
+            <div class="main-content">
+
+                <div class="filter">
+                    <button class="filter-btn " data-filter="sobre-mim">Sobre mim</button>
+                    <button class="filter-btn" data-filter="formacao">Formação</button>
+                    <button class="filter-btn" data-filter="portfolio">Portfólio</button>
+                    <button class="filter-btn active" data-filter="contato">Contato</button>
+                </div>
+
+                <div class="content-text">
+
+                    <div class="panel" data-panel="sobre-mim" hidden>
+                        <p>
+                            Olá! Meu nome é Marcos. Sou um entusiasta da tecnologia e estou em constante busca
+                            por conhecimento na área de desenvolvimento de software. Desde jovem, sempre me interessei
+                            por computadores e programação, e essa paixão me levou a estudar Engenharia de Software na
+                            Uninter. Além de programar, adoro mergulhar em livros de ficção científica e
+                            assistir a filmes e séries que exploram temas complexos e fascinantes. Para manter um estilo
+                            de vida saudável, pratico musculação regularmente, acredito que o equilíbrio entre corpo e
+                            mente é essencial para alcançar o sucesso em todas as áreas da vida.
+                        </p>
+                    </div>
+                    <div class="panel" data-panel="formacao" hidden>
+                        <p>
+                            Atualmente, estou cursando Engenharia de Software na Uninter. Além do português, sou fluente em inglês, o que me permite comunicar e colaborar
+                            efetivamente em projetos internacionais, além de acessar uma ampla gama de recursos
+                            educacionais na área de tecnologia.
+                        </p>
+                    </div>
+                    <div class="panel" data-panel="portfolio" hidden>                       
+                        <ul class="portfolio">
+                            <li>
+                                <a href="https://github.com" target="_blank">GitHub</a>:
+                                No meu perfil do GitHub, você encontrará uma variedade de projetos que desenvolvi ao
+                                longo da minha jornada de aprendizado.
+                            </li>
+                            <li>
+                                <a href="https://br.linkedin.com" target="_blank">LinkedIn</a>:
+                                No LinkedIn, mantenho meu perfil atualizado com minhas experiências profissionais,
+                                habilidades e projetos relevantes. Se quiser se conectar, estou sempre aberto a novas
+                                oportunidades e colaborações na área de tecnologia.
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="panel" data-panel="contato" >
+
+                        <div class="contact__form">
+
+                            <form
+                                action="#"
+                                class="card bg-color-2"
+                            >
+                                <input
+                                    type="text"
+                                    class="form__input"
+                                    placeholder="Nome"
+                                    required
+                                >
+                                <input
+                                    type="email"
+                                    class="form__input"
+                                    placeholder="Email"
+                                    required
+                                >
+                                <textarea
+                                    class="form__input"
+                                    placeholder="Mensagem"
+                                    style="resize: none;"
+                                    rows="7"
+                                    required
+                                    va
+                                ></textarea>
+                                <button
+                                    type="submit"
+                                    class="form-button active"
+                                >
+                                    Enviar
+                                </button>
+                            </form>        
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
