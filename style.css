@@ -1,0 +1,195 @@
+:root {
+    --container-max-width: 90rem;
+    --min-inline-margin: 2rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.7;
+}
+
+/* 
+    Layout 
+*/
+.content-grid {
+    display: grid;
+    grid-template-columns:
+        [full-width-start breakout-left-start] minmax(1rem, 1fr) [content-start breakout-right-start] min(100% - var(--min-inline-margin), var(--container-max-width)) [content-end breakout-left-start] minmax(1rem, 1fr) [full-width-end breakout-right-end];
+}
+
+/* 
+    Header 
+*/
+.content-grid>.full-width {
+    grid-column: full-width;
+
+    display: grid;
+    grid-template-columns: inherit;
+
+    &>* {
+        grid-column: content;
+    }
+}
+
+.primary-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+
+    .primary-header__title {
+        font-weight: 500;
+    }
+}
+
+/* 
+    Main 
+*/
+.content-grid>main {
+    grid-column: content;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .main-content {
+        flex-basis: 55ch;
+        flex-grow: 999;
+    }
+
+    .content-text {
+        line-height: 2rem;
+    }
+
+    .portfolio {
+        list-style: none;
+
+        li {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            color: black;
+        }
+    }
+
+    .contact__form {
+        width: 100%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            
+            .form-button {
+                padding: 1.35rem 1.25rem;
+
+                background: black;
+                border: 0;
+                border-radius: 0.25rem;
+                box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
+                color: white;
+                cursor: pointer;
+                font-family: inherit;
+                font-size: 1rem;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+
+            }
+
+            .form__input {
+                display: inline-block;
+                padding: 0.9rem 1.5rem;
+
+                margin-bottom: 1.5rem;
+                /* // background-color: $bg-color-3;
+                // border: none; */
+                border: 1px solid #cccccc;
+                border-radius: 0.25rem;
+                color:black;
+                font-family: inherit;
+                font-size: 0.9rem;
+                font-weight: 500;
+                outline: none;
+                transition: all 300ms;
+
+                &:hover,
+                &:focus {
+                    filter: brightness(97%);
+                }
+
+                &:focus {
+                    border-color: black;
+                }
+            }
+        }
+    }
+
+    aside {
+        flex-basis: 500px;
+        flex-grow: 1;
+
+        .photo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+
+            img {
+                width: 300px;
+                height: 300px;
+                /* width: 100%; */
+
+                object-fit: cover;
+                object-position: center;
+
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        border: 0;
+        padding: 0;
+
+        .filter-btn {
+            cursor: pointer;
+            text-transform: uppercase;
+            background: transparent;
+            border: 0;
+            border-radius: 0.25rem;
+            padding: 0.5rem 1.25rem;
+
+            &:hover,
+            &:focus {
+                background-color: #ccc;
+            }
+
+            &.active {
+                background: black;
+                color: white;
+                box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
+                pointer-events: none;
+            }
+        }
+    }
+
+    .content-text {
+
+        margin-top: 5rem;
+    }
+}
